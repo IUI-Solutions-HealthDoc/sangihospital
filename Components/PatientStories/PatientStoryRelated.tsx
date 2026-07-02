@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import type { PatientStory } from "./patientStoriesContent";
@@ -25,7 +25,7 @@ export default function PatientStoryRelated({ stories }: PatientStoryRelatedProp
               className="pstory-related__card"
             >
               <div className="pstory-related__image-wrap">
-                <Image
+                <AppImage
                   src={story.image}
                   alt={story.title}
                   fill

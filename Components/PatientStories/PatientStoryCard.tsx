@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowUpRight, Quote, Sparkles } from "lucide-react";
 import type { PatientStory } from "./patientStoriesContent";
@@ -19,7 +19,7 @@ export default function PatientStoryCard({
         href={`/patient-stories/${story.slug}`}
         className="pstory-card__media"
       >
-        <Image
+        <AppImage
           src={story.image}
           alt={story.title}
           fill
@@ -52,7 +52,7 @@ export default function PatientStoryCard({
         <div className="pstory-card__footer">
           <div className="pstory-card__patient">
             <span className="pstory-card__avatar-wrap">
-              <Image
+              <AppImage
                 src={story.patient.avatar}
                 alt={story.patient.name}
                 fill

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { aboutHero } from "./aboutContent";
 
 export default function AboutHero() {
@@ -9,12 +9,13 @@ export default function AboutHero() {
           {/* Image column */}
           <div className="about-hero__image-wrap relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-[0_20px_50px_rgba(0,3,40,0.12)]">
-              <Image
+              <AppImage
                 src={aboutHero.image}
                 alt="Sangi Hospital building"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
               />
             </div>
 

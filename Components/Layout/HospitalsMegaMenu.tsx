@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 import { useMemo, useState } from "react";
@@ -117,7 +117,7 @@ function HospitalPreview({
             }`}
             style={{ position: "absolute", inset: 0 }}
           >
-            <Image
+            <AppImage
               src={hospital.image}
               alt={hospital.name}
               fill

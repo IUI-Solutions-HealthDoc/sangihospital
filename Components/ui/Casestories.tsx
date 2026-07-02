@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import "./casestories.css";
@@ -44,7 +44,7 @@ function CaseStoryCard({ story }: { story: CaseStory }) {
     <article className="case-stories__card">
       <div className="case-stories__image-wrap">
         <span className="case-stories__badge">{story.badge}</span>
-        <Image
+        <AppImage
           src={story.image}
           alt={story.title}
           fill

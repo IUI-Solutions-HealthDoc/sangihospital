@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -76,7 +76,7 @@ export default function Services() {
               </h2>
 
               <div className="services-image-wrap">
-                <Image
+                <AppImage
                   src={servicesHeroImage}
                   alt="Medical professionals at Sangi Hospital"
                   fill

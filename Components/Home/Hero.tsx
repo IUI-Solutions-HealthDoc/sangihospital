@@ -1,6 +1,6 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { ArrowDown, Play, Star } from "lucide-react";
-
+import { siteConfig } from "@/lib/site";
 const HERO_VIDEO = "/assets/videos/home/herobg.mp4";
 const HERO_POSTER = "/assets/images/home/hero_bg_1.jpeg";
 
@@ -21,7 +21,7 @@ function PatientAvatars() {
           className="hero__patient-avatar"
           style={{ zIndex: patientPhotos.length - index }}
         >
-          <Image
+          <AppImage
             src={photo.src}
             alt={photo.alt}
             fill
@@ -76,13 +76,18 @@ export default function Hero() {
             available in your neighbourhood.
           </p>
 
-          <button type="button" className="hero__play" aria-label="See how we work">
+          <a
+            href={siteConfig.social.youtube}
+            className="hero__play"
+            aria-label="Watch Sangi Hospital on YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="hero__play-icon">
               <Play aria-hidden="true" />
             </span>
             <span className="hero__play-label">See How We Works</span>
-          </button>
-
+          </a>
           <div className="hero__proof">
             <PatientAvatars />
             <StarRating />
@@ -95,12 +100,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero__scroll" aria-hidden="true">
+      {/* <div className="hero__scroll" aria-hidden="true">
         <span className="hero__scroll-icon">
           <ArrowDown />
         </span>
         <p className="hero__scroll-text">SCROLL FOR MORE</p>
-      </div>
+      </div> */}
     </section>
   );
 }

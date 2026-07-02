@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import ServicesMegaMenu from "@/Components/Layout/ServicesMegaMenu";
 import SpecialitiesMegaMenu from "@/Components/Layout/SpecialitiesMegaMenu";
@@ -77,7 +77,7 @@ export default function Header() {
           href="/"
           className="flex shrink-0 items-center transition-opacity hover:opacity-90"
         >
-          <Image
+          <AppImage
             src="/assets/images/icons/logo.png"
             alt="Sangi Hospital"
             width={180}

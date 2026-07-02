@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { BlogPost } from "./blogContent";
@@ -13,7 +13,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
   return (
     <article className={`blog-card${featured ? " blog-card--featured" : ""}`}>
       <Link href={`/blog/${post.slug}`} className="blog-card__media">
-        <Image
+        <AppImage
           src={post.image}
           alt={post.title}
           fill
@@ -35,7 +35,7 @@ export default function BlogCard({ post, featured = false }: BlogCardProps) {
         <div className="blog-card__footer">
           <div className="blog-card__author">
             <span className="blog-card__avatar-wrap">
-              <Image
+              <AppImage
                 src={post.author.avatar}
                 alt={post.author.name}
                 fill

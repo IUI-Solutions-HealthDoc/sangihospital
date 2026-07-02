@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { Check } from "lucide-react";
 import { getServiceIcon } from "./serviceIcons";
 import type { Service } from "./servicesContent";
@@ -44,7 +44,7 @@ export default function ServiceDetailIntro({ service }: ServiceDetailIntroProps)
             <ServiceIcon id={service.id} size={18} strokeWidth={1.6} />
           </div>
           <div className="service-detail-intro__image-wrap">
-            <Image
+            <AppImage
               src={service.image}
               alt={service.name}
               fill

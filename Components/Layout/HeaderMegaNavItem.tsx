@@ -129,7 +129,7 @@ export default function HeaderMegaNavItem({
         onPointerLeave={handlePointerLeave}
         onClickCapture={handleLinkClick}
       >
-        {children}
+        {isOpen ? children : null}
       </div>
     </div>
   );

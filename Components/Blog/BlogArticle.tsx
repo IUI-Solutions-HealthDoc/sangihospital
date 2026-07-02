@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowLeft, Heart, MessageCircle, Tag } from "lucide-react";
 import type { BlogPost } from "./blogContent";
@@ -26,7 +26,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
 
           <div className="blog-article__author-card">
             <span className="blog-article__author-avatar-wrap">
-              <Image
+              <AppImage
                 src={post.author.avatar}
                 alt={post.author.name}
                 fill
@@ -42,7 +42,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
         </header>
 
         <div className="blog-article__cover">
-          <Image
+          <AppImage
             src={post.image}
             alt={post.title}
             fill
@@ -87,7 +87,7 @@ export default function BlogArticle({ post }: BlogArticleProps) {
             {post.comments.map((comment) => (
               <li key={comment.id} className="blog-comment">
                 <span className="blog-comment__avatar-wrap">
-                  <Image
+                  <AppImage
                     src={comment.avatar}
                     alt={comment.author}
                     fill

@@ -40,27 +40,34 @@ export default function MegafooterSubscribe() {
         </p>
       ) : (
         <form className="megafooter__subscribe-form" onSubmit={handleSubmit} noValidate>
-          <label htmlFor="megafooter-email" className="sr-only">
-            Email address
-          </label>
-          <input
-            id="megafooter-email"
-            type="email"
-            value={email}
-            onChange={(event) => {
-              setEmail(event.target.value);
-              if (error) setError("");
-            }}
-            placeholder="Your email address"
-            className="megafooter__subscribe-input"
-            maxLength={160}
-            aria-invalid={error ? "true" : "false"}
-          />
-          <button type="submit" className="megafooter__subscribe-button" aria-label="Subscribe">
-            <Mail size={18} aria-hidden="true" />
-          </button>
+          <div
+            className={`megafooter__subscribe-field${
+              error ? " megafooter__subscribe-field--error" : ""
+            }`}
+          >
+            <label htmlFor="megafooter-email" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="megafooter-email"
+              type="email"
+              value={email}
+              onChange={(event) => {
+                setEmail(event.target.value);
+                if (error) setError("");
+              }}
+              placeholder="Your email address"
+              className="megafooter__subscribe-input"
+              maxLength={160}
+              aria-invalid={error ? "true" : "false"}
+              aria-describedby={error ? "megafooter-email-error" : undefined}
+            />
+            <button type="submit" className="megafooter__subscribe-button" aria-label="Subscribe">
+              <Mail size={18} aria-hidden="true" />
+            </button>
+          </div>
           {error ? (
-            <p className="megafooter__subscribe-error" role="alert">
+            <p id="megafooter-email-error" className="megafooter__subscribe-error" role="alert">
               {error}
             </p>
           ) : null}

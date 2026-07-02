@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import {
   Award,
   Building2,
@@ -62,7 +62,7 @@ export default function NabhCerti() {
         <div className="nabh-certi__panel">
           <aside className="nabh-certi__badge-card" aria-label="NABH Entry Level Certification badge">
             <div className="nabh-certi__logo-wrap">
-              <Image
+              <AppImage
                 src={NABH_LOGO}
                 alt="NABH Entry Level Certification"
                 width={104}

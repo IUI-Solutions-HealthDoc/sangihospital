@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -106,7 +106,7 @@ export default function GeneralMedicineFeature() {
             <div className="specialities-featured__visual">
               <div className="specialities-featured__visual-pattern" aria-hidden="true" />
               <div className="specialities-featured__visual-image-wrap">
-                <Image
+                <AppImage
                   src={meta.image}
                   alt="General medicine consultation at Sangi Hospital"
                   fill

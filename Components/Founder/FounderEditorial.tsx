@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { founderPage } from "./founderContent";
 
 export default function FounderEditorial() {
@@ -41,7 +41,7 @@ export default function FounderEditorial() {
         {/* Right — Founder photo + name */}
         <div className="chairman-editorial__image-panel">
           <div className="chairman-editorial__photo">
-            <Image
+            <AppImage
               src={founder.image}
               alt={founder.name}
               fill

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
@@ -58,7 +58,7 @@ export default function Footer() {
         <div className="row g-4 g-lg-5 py-5 py-lg-6">
           <div className="col-lg-4 col-md-6">
             <Link href="/" className="site-footer__logo d-inline-block">
-              <Image
+              <AppImage
                 src="/assets/images/icons/logo.png"
                 alt="Sangi Hospital"
                 width={180}

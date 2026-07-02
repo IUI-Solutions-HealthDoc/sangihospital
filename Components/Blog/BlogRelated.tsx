@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { ArrowUpRight } from "lucide-react";
 import type { BlogPost } from "./blogContent";
 
@@ -21,7 +21,7 @@ export default function BlogRelated({ posts }: BlogRelatedProps) {
           {posts.map((post) => (
             <Link key={post.id} href={`/blog/${post.slug}`} className="blog-related__card">
               <div className="blog-related__image-wrap">
-                <Image
+                <AppImage
                   src={post.image}
                   alt={post.title}
                   fill

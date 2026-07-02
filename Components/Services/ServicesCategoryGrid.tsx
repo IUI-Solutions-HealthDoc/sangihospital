@@ -27,11 +27,15 @@ export default function ServicesCategoryGrid() {
             <div className="services-grid">
               {column.services
                 .filter((service) => !service.featured)
-                .map((service) => (
+                .map((service, index) => (
                   <ServiceCard
                     key={service.id}
                     service={service}
                     icon={getServiceIcon(service.id)}
+                    priority={
+                      (column.id === "twenty-four-seven" && index === 0) ||
+                      column.id === "wards"
+                    }
                   />
                 ))}
             </div>

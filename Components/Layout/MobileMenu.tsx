@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -153,7 +153,7 @@ export default function MobileMenu() {
       >
         <div className="mobile-menu__header">
           <Link href="/" className="mobile-menu__logo" onClick={closeMenu}>
-            <Image
+            <AppImage
               src="/assets/images/icons/logo.png"
               alt={siteConfig.name}
               width={140}
@@ -221,14 +221,12 @@ export default function MobileMenu() {
                                   className="mobile-menu__service-card"
                                   onClick={closeMenu}
                                 >
-                                  <span
-                                    className="mobile-menu__service-thumb"
-                                    style={{ position: "relative" }}
-                                  >
-                                    <Image
+                                  <span className="mobile-menu__service-thumb">
+                                    <AppImage
                                       src={service.image}
                                       alt=""
-                                      fill
+                                      width={56}
+                                      height={56}
                                       sizes="56px"
                                       className="mobile-menu__service-image"
                                     />
@@ -291,14 +289,12 @@ export default function MobileMenu() {
                           const upcoming = isHospitalUpcoming(hospital);
                           const cardContent = (
                             <>
-                              <span
-                                className="mobile-menu__hospital-thumb"
-                                style={{ position: "relative" }}
-                              >
-                                <Image
+                              <span className="mobile-menu__hospital-thumb">
+                                <AppImage
                                   src={hospital.image}
                                   alt=""
-                                  fill
+                                  width={56}
+                                  height={56}
                                   sizes="56px"
                                   className="mobile-menu__hospital-image"
                                 />

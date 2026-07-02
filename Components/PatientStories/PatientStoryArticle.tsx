@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -46,7 +46,7 @@ export default function PatientStoryArticle({ story }: PatientStoryArticleProps)
 
         <div className="pstory-article__profile">
           <span className="pstory-article__avatar-wrap">
-            <Image
+            <AppImage
               src={story.patient.avatar}
               alt={story.patient.name}
               fill
@@ -71,7 +71,7 @@ export default function PatientStoryArticle({ story }: PatientStoryArticleProps)
         </div>
 
         <div className="pstory-article__cover">
-          <Image
+          <AppImage
             src={story.image}
             alt={story.title}
             fill

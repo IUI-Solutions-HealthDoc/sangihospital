@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Image, { type StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { ChevronRight, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import "./innerhero.css";
@@ -34,13 +35,11 @@ export default function InnerHero({
     <section className="inner-hero" aria-labelledby="inner-hero-title">
       {backgroundImage && (
         <div className="inner-hero__media">
-          <Image
+          <AppImage
             src={backgroundImage}
             alt=""
             fill
             priority={priorityImage}
-            loading={priorityImage ? "eager" : "lazy"}
-            fetchPriority={priorityImage ? "high" : "auto"}
             placeholder={isStaticImage ? "blur" : undefined}
             sizes="100vw"
             className="inner-hero__image"

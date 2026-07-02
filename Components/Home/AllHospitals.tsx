@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { useMemo, useRef, useState } from "react";
 import { FaStar } from "react-icons/fa6";
@@ -80,7 +80,7 @@ function HospitalCard({ hospital }: { hospital: HospitalCardData }) {
   const content = (
     <>
       <div className="hospital-card__image-wrap">
-        <Image
+        <AppImage
           src={hospital.image}
           alt={hospital.name}
           fill

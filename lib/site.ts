@@ -14,6 +14,7 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/sangihospital",
     linkedin: "https://www.linkedin.com/in/sangihospital/",
     instagram: "https://www.instagram.com/sangihospital",
+    youtube: "https://www.youtube.com/@SangiHospital",
   },
   defaultOgImage: "/assets/images/home/hero_bg_1.jpeg",
   keywords: [

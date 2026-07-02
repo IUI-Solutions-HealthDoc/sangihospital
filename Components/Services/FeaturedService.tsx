@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowRight, Check, Clock, Siren, Users } from "lucide-react";
 import { getServiceHref } from "@/lib/services-routes";
@@ -86,12 +86,13 @@ export default function FeaturedService() {
             <div className="services-featured__visual">
               <div className="services-featured__visual-pattern" aria-hidden="true" />
               <div className="services-featured__visual-image-wrap">
-                <Image
+                <AppImage
                   src={service.image}
                   alt={service.name}
                   fill
                   sizes="(max-width: 768px) 100vw, 38vw"
                   className="services-featured__image"
+                  priority
                 />
               </div>
               <div className="services-featured__visual-chip" aria-hidden="true">

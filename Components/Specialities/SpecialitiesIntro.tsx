@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { MapPin, Microscope, Stethoscope } from "lucide-react";
 import { specialitiesPage } from "./specialitiesContent";
 
@@ -61,12 +61,13 @@ export default function SpecialitiesIntro() {
         <div className="specialities-intro__visual">
           <div className="specialities-intro__visual-frame" aria-hidden="true" />
           <div className="specialities-intro__image-wrap">
-            <Image
+            <AppImage
               src={intro.image}
               alt="Medical specialists at Sangi Hospital"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
               className="specialities-intro__image"
+              priority
             />
           </div>
 

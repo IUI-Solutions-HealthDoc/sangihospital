@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { chairmanPage } from "./chairmanContent";
 
 export default function ChairmanEditorial() {
@@ -40,7 +40,7 @@ export default function ChairmanEditorial() {
         
         <div className="chairman-editorial__image-panel">
           <div className="chairman-editorial__photo">
-            <Image
+            <AppImage
               src={chairman.image}
               alt={chairman.name}
               fill

@@ -34,6 +34,7 @@ export function getOrganizationJsonLd() {
       siteConfig.social.facebook,
       siteConfig.social.linkedin,
       siteConfig.social.instagram,
+      siteConfig.social.youtube,
     ],
   };
 }

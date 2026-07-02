@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { ourJourney } from "./aboutContent";
 
 export default function OurJourney() {
@@ -94,7 +94,7 @@ export default function OurJourney() {
                     }`}
                     style={{ position: "absolute", inset: 0 }}
                   >
-                    <Image
+                    <AppImage
                       src={milestone.image}
                       alt={milestone.title}
                       fill

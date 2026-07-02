@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { useSyncExternalStore } from "react";
 import { ShieldCheck } from "lucide-react";
 import { tpaPartners, tpaTickerContent, type TpaPartner } from "./tpaPartnersContent";
@@ -22,7 +22,7 @@ function getReducedMotionServerSnapshot() {
 function TpaLogoItem({ partner }: { partner: TpaPartner }) {
   return (
     <figure className="tpa-ticker__item" title={partner.name}>
-      <Image
+      <AppImage
         src={partner.logo}
         alt={partner.alt}
         width={200}

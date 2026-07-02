@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { Quote } from "lucide-react";
 import { useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
@@ -64,7 +64,7 @@ function TestimonialSlide({ item }: { item: Testimonial }) {
           className="testimonials__avatar-wrap"
           style={{ position: "relative" }}
         >
-          <Image
+          <AppImage
             src={item.avatar}
             alt={item.name}
             fill

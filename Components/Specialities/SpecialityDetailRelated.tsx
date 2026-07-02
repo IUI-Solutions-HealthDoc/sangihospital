@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { getSpecialityHref } from "@/lib/specialities-routes";
@@ -31,7 +31,7 @@ export default function SpecialityDetailRelated({
           {related.map((item) => (
             <article key={item.id} className="speciality-detail-related__card">
               <div className="speciality-detail-related__image-wrap">
-                <Image
+                <AppImage
                   src={item.image}
                   alt={item.name}
                   fill

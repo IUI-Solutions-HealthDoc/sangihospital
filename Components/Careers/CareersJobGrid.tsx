@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -53,7 +53,7 @@ export default function CareersJobGrid() {
                 }
               >
                 <div className="careers-job-card__media">
-                  <Image
+                  <AppImage
                     src={job.image}
                     alt=""
                     fill

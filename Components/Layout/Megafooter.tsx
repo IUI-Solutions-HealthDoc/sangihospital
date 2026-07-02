@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import {
@@ -80,7 +80,7 @@ export default function Megafooter() {
         <div className="megafooter__utility">
           <div className="megafooter__utility-left">
             <Link href="/" className="megafooter__logo">
-              <Image
+              <AppImage
                 src="/assets/images/icons/logo.png"
                 alt={siteConfig.name}
                 width={150}

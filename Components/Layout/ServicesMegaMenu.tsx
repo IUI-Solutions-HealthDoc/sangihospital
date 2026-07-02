@@ -1,11 +1,10 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useMemo, useState } from "react";
 import {
-  allServices,
   getDefaultServiceId,
   getServiceById,
   servicesMegaMenu,
@@ -30,7 +29,7 @@ export default function ServicesMegaMenu() {
       >
         <div className="header-services-mega__brand">
           <div className="header-services-mega__brand-image-wrap">
-            <Image
+            <AppImage
               src={brandImage}
               alt={brandImageAlt}
               fill
@@ -40,7 +39,7 @@ export default function ServicesMegaMenu() {
           </div>
 
           <Link href="/" className="header-services-mega__logo">
-            <Image
+            <AppImage
               src="/assets/images/icons/logo.png"
               alt={title}
               width={140}
@@ -82,53 +81,33 @@ export default function ServicesMegaMenu() {
         </div>
 
         <div className="header-services-mega__preview">
-          <ServicePreview
-            services={allServices}
-            activeServiceId={previewService?.id ?? ""}
-          />
+          {previewService ? (
+            <ServicePreview service={previewService} />
+          ) : null}
         </div>
       </div>
     </div>
   );
 }
 
-function ServicePreview({
-  services,
-  activeServiceId,
-}: {
-  services: ServiceItem[];
-  activeServiceId: string;
-}) {
-  if (services.length === 0) return null;
-
-  const activeService =
-    services.find((service) => service.id === activeServiceId) ?? services[0];
-
+function ServicePreview({ service }: { service: ServiceItem }) {
   return (
     <div className="header-services-mega__preview-card">
       <div className="header-services-mega__preview-image-wrap">
-        {services.map((service) => (
-          <div
-            key={service.id}
-            className={`header-services-mega__preview-slide${
-              service.id === activeServiceId ? " is-active" : ""
-            }`}
-          >
-            <Image
-              src={service.image}
-              alt={service.label}
-              fill
-              sizes="300px"
-              className="header-services-mega__preview-image"
-            />
-          </div>
-        ))}
+        <AppImage
+          key={service.id}
+          src={service.image}
+          alt={service.label}
+          fill
+          sizes="300px"
+          className="header-services-mega__preview-image"
+        />
       </div>
 
       <div className="header-services-mega__preview-body">
-        <p className="header-services-mega__preview-label">{activeService.label}</p>
-        <p className="header-services-mega__preview-text">{activeService.description}</p>
-        <Link href={activeService.href} className="header-services-mega__preview-link">
+        <p className="header-services-mega__preview-label">{service.label}</p>
+        <p className="header-services-mega__preview-text">{service.description}</p>
+        <Link href={service.href} className="header-services-mega__preview-link">
           Learn More
           <ArrowRight size={14} aria-hidden="true" />
         </Link>

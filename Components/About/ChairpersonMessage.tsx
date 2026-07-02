@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { chairpersonMessage } from "./aboutContent";
 
 export default function ChairpersonMessage() {
@@ -9,7 +9,7 @@ export default function ChairpersonMessage() {
       <div className="chairperson-message__layout">
         <aside className="chairperson-message__portrait">
           <div className="chairperson-message__photo-wrap">
-            <Image
+            <AppImage
               src={image}
               alt={name}
               fill

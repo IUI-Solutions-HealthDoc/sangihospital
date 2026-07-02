@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { Check } from "lucide-react";
 import { getSpecialityIcon } from "./specialityIcons";
 import type { SpecialityDetail } from "./specialitiesContent";
@@ -49,7 +49,7 @@ export default function SpecialityDetailIntro({
             <SpecialityIcon id={speciality.id} size={18} strokeWidth={1.6} />
           </div>
           <div className="speciality-detail-intro__image-wrap">
-            <Image
+            <AppImage
               src={speciality.image}
               alt={speciality.name}
               fill

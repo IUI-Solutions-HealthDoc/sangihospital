@@ -922,6 +922,13 @@
   margin-top: 1.25rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(19, 37, 115, 0.08);
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.22s ease;
+}
+
+.service-card__footer:hover {
+  color: inherit;
 }
 
 .service-card__link {
@@ -933,7 +940,8 @@
   transition: color 0.22s ease;
 }
 
-.service-card:hover .service-card__link {
+.service-card:hover .service-card__link,
+.service-card__footer:hover .service-card__link {
   color: var(--foreground-accent);
 }
 
@@ -952,7 +960,8 @@
     transform 0.22s ease;
 }
 
-.service-card:hover .service-card__arrow {
+.service-card:hover .service-card__arrow,
+.service-card__footer:hover .service-card__arrow {
   background: var(--foreground);
   color: #ffffff;
   transform: translate(2px, -2px);

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { specialitiesMegaMenu } from "@/lib/specialities-menu";
@@ -12,7 +12,7 @@ export default function SpecialitiesMegaMenu() {
       <div className="header-mega__panel">
         <div className="header-mega__brand">
           <div className="header-mega__image-wrap">
-            <Image
+            <AppImage
               src={image}
               alt={imageAlt}
               fill
@@ -22,7 +22,7 @@ export default function SpecialitiesMegaMenu() {
           </div>
 
           <Link href="/" className="header-mega__logo">
-            <Image
+            <AppImage
               src="/assets/images/icons/logo.png"
               alt={title}
               width={150}

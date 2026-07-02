@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Headphones, HeartHandshake } from "lucide-react";
 import { patientCornerMegaMenu } from "@/lib/patient-corner";
@@ -18,7 +18,7 @@ export default function PatientCornerMegaMenu() {
       <div className="header-mega__panel header-mega__panel--patient-corner">
         <div className="header-mega__brand">
           <div className="header-mega__image-wrap">
-            <Image
+            <AppImage
               src={image}
               alt={imageAlt}
               fill

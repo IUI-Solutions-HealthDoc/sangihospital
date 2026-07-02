@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 
 type Department = {
@@ -47,7 +47,7 @@ function DepartmentCard({ department }: { department: Department }) {
         <span className="department-card__circle" aria-hidden="true" />
         <div className="department-card__content d-flex align-items-center">
           <div className="department-card__icon-wrap">
-            <Image
+            <AppImage
               src={department.icon}
               alt=""
               width={38}

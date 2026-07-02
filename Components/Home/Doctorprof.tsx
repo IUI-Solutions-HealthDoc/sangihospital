@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import Link from "next/link";
 import { useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
@@ -65,7 +65,7 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
   return (
     <article className="doctor-card h-100">
       <div className="doctor-card__image-wrap">
-        <Image
+        <AppImage
           src={doctor.image}
           alt={doctor.name}
           fill

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { Clock, Microscope, ShieldCheck } from "lucide-react";
 import { servicesPage } from "./servicesContent";
 
@@ -55,12 +55,13 @@ export default function ServicesIntro() {
         <div className="services-intro__visual">
           <div className="services-intro__visual-frame" aria-hidden="true" />
           <div className="services-intro__image-wrap">
-            <Image
+            <AppImage
               src={intro.image}
               alt="Hospital services at Sangi Hospital"
               fill
               sizes="(max-width: 1024px) 100vw, 42vw"
               className="services-intro__image"
+              priority
             />
           </div>
           <article className="services-intro__floating-card">

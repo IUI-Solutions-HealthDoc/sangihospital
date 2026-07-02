@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import AppImage from "@/Components/ui/AppImage";
 import { ArrowRight } from "lucide-react";
 import { getServiceHref } from "@/lib/services-routes";
 import { getRelatedServices } from "./servicesContent";
@@ -26,7 +26,7 @@ export default function ServiceDetailRelated({ service }: ServiceDetailRelatedPr
           {related.map((item) => (
             <article key={item.id} className="service-detail-related__card">
               <div className="service-detail-related__image-wrap">
-                <Image
+                <AppImage
                   src={item.image}
                   alt={item.name}
                   fill

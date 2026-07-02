@@ -119,6 +119,7 @@
   border: none;
   background: transparent;
   color: #ffffff;
+  text-decoration: none;
   cursor: pointer;
   transition: opacity 0.25s ease;
 }
