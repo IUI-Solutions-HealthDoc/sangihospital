@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
     id: "2",
     quote:
       "We chose Sangi Hospital for my mother's surgery and could not have asked for a better experience. The facilities are modern, the team is reassuring, and the follow-up care was thorough.",
-    name: "Rajesh Verma",
+    name: "Chhavi Verma",
     role: "Patient Family — General Surgery",
     avatar: "/assets/images/avatars/patient-2.jpg",
   },
@@ -40,7 +40,7 @@ const testimonials: Testimonial[] = [
     id: "3",
     quote:
       "From emergency care to specialist consultations, Sangi Hospital has consistently delivered trustworthy medical support for our family. We feel safe knowing expert doctors are always nearby.",
-    name: "Anita Sharma",
+    name: "Ankita Sharma",
     role: "Patient — Gynecology",
     avatar: "/assets/images/avatars/patient-3.jpg",
   },
@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     id: "4",
     quote:
       "The diagnostic services were quick and accurate, and the staff explained every step clearly. It is rare to find a hospital that combines advanced technology with such genuine human care.",
-    name: "Vikram Singh",
+    name: "Vidhi Singh",
     role: "Patient — Radiology",
     avatar: "/assets/images/avatars/patient-4.jpg",
   },

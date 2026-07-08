@@ -13,7 +13,7 @@ export function getOrganizationJsonLd() {
     logo: `${siteUrl}/assets/images/icons/logo.png`,
     image: `${siteUrl}${siteConfig.defaultOgImage}`,
     description: siteConfig.description,
-    telephone: siteConfig.phoneTel,
+    telephone: siteConfig.phones.map((phone) => phone.tel),
     email: siteConfig.email,
     areaServed: {
       "@type": "AdministrativeArea",

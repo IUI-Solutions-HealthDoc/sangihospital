@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { CheckCircle2, ChevronDown, Mail, MapPin, Phone } from "lucide-react";
+import { HospitalPhones } from "@/Components/ui/HospitalPhones";
 import { contactPage } from "./contactContent";
 import { submitContactRequest } from "@/lib/api/forms";
 import { siteConfig } from "@/lib/site";
@@ -117,7 +118,12 @@ export default function ContactForm() {
               </span>
               <div>
                 <p className="contact-sidebar__label">{item.label}</p>
-                {"href" in item ? (
+                {"phones" in item ? (
+                  <HospitalPhones
+                    layout="stack"
+                    linkClassName="contact-sidebar__value"
+                  />
+                ) : "href" in item ? (
                   <a href={item.href} className="contact-sidebar__value">
                     {item.value}
                   </a>
@@ -165,7 +171,7 @@ export default function ContactForm() {
               <input
                 id="phone"
                 type="tel"
-                placeholder={siteConfig.phone}
+                placeholder={siteConfig.phonesDisplay}
                 className="contact-form__input"
                 aria-invalid={errors.phone ? "true" : "false"}
                 maxLength={20}

@@ -117,7 +117,10 @@ export const megaFooterColumns: MegaFooterColumn[] = [
         title: "Support",
         links: [
           { label: "Contact & Help", href: "/contact" },
-          { label: "Emergency Helpline", href: `tel:${siteConfig.phoneTel}` },
+          ...siteConfig.phones.map((phone) => ({
+            label: phone.display,
+            href: `tel:${phone.tel}`,
+          })),
           { label: "Email Support", href: `mailto:${siteConfig.email}` },
           { label: "All Services", href: "/services" },
         ],

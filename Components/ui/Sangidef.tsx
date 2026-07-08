@@ -290,8 +290,9 @@ export default function Sangidef() {
                       key={`${char}-${index}`}
                       className={`${letterClass} sangidef__letter--i`}
                     >
-                      i
-                      <span className="sangidef__letter-i-cover" aria-hidden="true" />
+                      <span className="sangidef__letter-i-stem" aria-hidden="true">
+                        ı
+                      </span>
                       <span className="sangidef__letter-i-dot" aria-hidden="true" />
                     </span>
                   );

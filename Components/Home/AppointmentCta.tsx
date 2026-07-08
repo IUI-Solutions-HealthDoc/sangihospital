@@ -149,7 +149,7 @@ export default function AppointmentCta() {
                 <div className="appointment-cta__field">
                   <input
                     type="tel"
-                    placeholder={siteConfig.phone}
+                    placeholder={siteConfig.phonesDisplay}
                     className="appointment-cta__input"
                     aria-invalid={errors.phone ? "true" : "false"}
                     maxLength={20}

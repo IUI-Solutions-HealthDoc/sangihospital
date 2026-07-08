@@ -1040,13 +1040,15 @@
   margin-top: 0.85rem;
 }
 
-.career-sidebar__contact-list a {
+.career-sidebar__contact-list a,
+.career-sidebar__phone-link {
   color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.career-sidebar__contact-list a:hover {
+.career-sidebar__contact-list a:hover,
+.career-sidebar__phone-link:hover {
   color: #ffffff;
 }
 

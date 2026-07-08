@@ -24,8 +24,7 @@ export const contactPage = {
   contactInfo: [
     {
       label: "Phone",
-      value: siteConfig.phone,
-      href: `tel:${siteConfig.phoneTel}`,
+      phones: siteConfig.phones,
     },
     {
       label: "Email",

@@ -1,4 +1,5 @@
 import type { LegalPageContent } from "../types";
+import { siteConfig } from "@/lib/site";
 
 export const termsOfUseContent: LegalPageContent = {
   slug: "terms-of-use",
@@ -53,7 +54,7 @@ export const termsOfUseContent: LegalPageContent = {
       paragraphs: [
         "Content on this website — including articles, service descriptions, speciality information, and patient stories — is provided for general informational purposes only. It is not intended as medical advice, diagnosis, or treatment recommendation.",
         "Always seek the advice of a qualified healthcare professional for any medical condition. Never disregard professional medical advice or delay seeking care because of something you read on this website.",
-        "In a medical emergency, call our helpline or visit the nearest Sangi Hospital emergency department immediately.",
+        `In a medical emergency, call our helpline at ${siteConfig.phonesDisplay} or visit the nearest Sangi Hospital emergency department immediately.`,
       ],
     },
     {

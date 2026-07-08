@@ -14,7 +14,9 @@ export const appointmentPage = {
     heading: "Fast, Simple",
     headingAccent: "Appointment Scheduling",
     description:
-      "Fill in your details and our team will confirm your appointment. For medical emergencies, please call our 24x7 helpline directly.",
+      "Fill in your details and our team will confirm your appointment. For medical emergencies, please call our 24x7 helpline at " +
+        siteConfig.phonesDisplay +
+        " directly.",
   },
   features: [
     {
@@ -30,7 +32,7 @@ export const appointmentPage = {
     {
       title: "24x7 Emergency Support",
       description:
-        "For urgent medical needs, contact our emergency helpline — available round the clock.",
+        `For urgent medical needs, contact our emergency helpline at ${siteConfig.phonesDisplay} — available round the clock.`,
     },
   ],
   steps: [
@@ -50,7 +52,7 @@ export const appointmentPage = {
     { value: "evening", label: "Evening (4 PM – 8 PM)" },
   ],
   contact: {
-    phone: siteConfig.phone,
+    phone: siteConfig.phonesDisplay,
     email: siteConfig.email,
     hours: "Mon – Sat: 9:00 AM – 8:00 PM",
     location: {

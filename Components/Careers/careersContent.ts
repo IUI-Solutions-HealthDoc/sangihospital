@@ -79,7 +79,7 @@ export const careersPage = {
   },
   contact: {
     email: "careers@sangihospital.com",
-    phone: siteConfig.phone,
+    phone: siteConfig.phonesDisplay,
     hours: "Mon – Sat: 10:00 AM – 6:00 PM",
   },
 } as const;

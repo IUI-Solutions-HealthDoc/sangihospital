@@ -7,12 +7,11 @@ import {
   Heart,
   Lock,
   Mail,
-  Phone,
   Shield,
   Users,
 } from "lucide-react";
 import InnerHero from "@/Components/ui/InnerHero";
-import { siteConfig } from "@/lib/site";
+import { HospitalPhones } from "@/Components/ui/HospitalPhones";
 import { getRelatedLegalPages, legalHeroImage } from "./content/shared";
 import type { LegalHighlight, LegalPageContent } from "./types";
 import "./legal.css";
@@ -177,10 +176,11 @@ export default function LegalPageLayout({ content }: LegalPageLayoutProps) {
                   reach out through any of the channels below.
                 </p>
                 <div className="legal-cta__actions">
-                  <a href={`tel:${siteConfig.phoneTel}`} className="legal-cta__button">
-                    <Phone size={18} aria-hidden="true" />
-                    {siteConfig.phone}
-                  </a>
+                  <HospitalPhones
+                    layout="stack"
+                    className="legal-cta__phone-group"
+                    linkClassName="legal-cta__button"
+                  />
                   <Link href="/contact" className="legal-cta__button legal-cta__button--ghost">
                     <Mail size={18} aria-hidden="true" />
                     Contact Us

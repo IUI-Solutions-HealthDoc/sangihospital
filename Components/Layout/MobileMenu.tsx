@@ -1,6 +1,7 @@
 "use client";
 
 import AppImage from "@/Components/ui/AppImage";
+import { HospitalPhones } from "@/Components/ui/HospitalPhones";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -517,10 +518,10 @@ export default function MobileMenu() {
         </div>
 
         <div className="mobile-menu__footer">
-          <a href={`tel:${siteConfig.phoneTel}`} className="mobile-menu__phone">
+          <div className="mobile-menu__phones">
             <Phone size={18} aria-hidden="true" />
-            {siteConfig.phone}
-          </a>
+            <HospitalPhones layout="stack" linkClassName="mobile-menu__phone" />
+          </div>
 
           <Link
             href="/appointment"

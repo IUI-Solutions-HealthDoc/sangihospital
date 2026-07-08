@@ -1,5 +1,5 @@
+import { HospitalPhones } from "@/Components/ui/HospitalPhones";
 import { Mail, Phone, Clock, Briefcase } from "lucide-react";
-import { siteConfig } from "@/lib/site";
 import { careersPage } from "./careersContent";
 import type { CareerJob } from "./careersContent";
 
@@ -33,7 +33,7 @@ export default function CareerApplicationSidebar({ job }: CareerApplicationSideb
         <ul className="career-sidebar__contact-list">
           <li>
             <Phone size={18} aria-hidden="true" />
-            <a href={`tel:${siteConfig.phoneTel}`}>{contact.phone}</a>
+            <HospitalPhones layout="stack" linkClassName="career-sidebar__phone-link" />
           </li>
           <li>
             <Mail size={18} aria-hidden="true" />

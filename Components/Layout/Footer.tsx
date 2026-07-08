@@ -1,4 +1,5 @@
 import AppImage from "@/Components/ui/AppImage";
+import { HospitalPhones } from "@/Components/ui/HospitalPhones";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 
@@ -121,9 +122,10 @@ export default function Footer() {
               <br />
               New York. USA
             </p>
-            <a href={`tel:${siteConfig.phoneTel}`} className="site-footer__phone font-heading">
-              {siteConfig.phone}
-            </a>
+            <HospitalPhones
+              layout="stack"
+              linkClassName="site-footer__phone font-heading"
+            />
           </div>
         </div>
 

@@ -156,20 +156,12 @@
 .sangidef__letter--i {
   position: relative;
   display: inline-block;
+  padding-top: 0.19em;
 }
 
-/* Hides the font dot using the same color as the letter stem */
-.sangidef__letter-i-cover {
-  position: absolute;
-  top: 0.055em;
-  left: 50%;
-  z-index: 1;
-  width: 0.24em;
-  height: 0.24em;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: currentColor;
-  pointer-events: none;
+.sangidef__letter-i-stem {
+  display: block;
+  line-height: 0.5;
 }
 
 .sangidef__letter-i-dot {
@@ -178,17 +170,17 @@
   background: #e53935;
   border-radius: 50%;
   width: 0.22em;
-  height: .22em;
-  transition: transform .55s cubic-bezier(.22, 1, .36, 1);
+  height: 0.22em;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
   position: absolute;
-  top: .064em;
+  top: 0.03em;
   left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 10px #e5393573;
+  transform: translateX(calc(-50% + 5px));
+  box-shadow: 0 0 10px rgba(229, 57, 53, 0.45);
 }
 
 .sangidef__letter--i.is-active .sangidef__letter-i-dot {
-  transform: translateX(-50%) scale(1.05);
+  transform: translateX(calc(-50% + 5px)) scale(1.05);
 }
 
 .sangidef__glow {

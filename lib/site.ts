@@ -1,3 +1,8 @@
+export const hospitalPhones = [
+  { display: "+91 931 121 2090", tel: "+919311212090" },
+  { display: "+91 931 121 2091", tel: "+919311212091" },
+] as const;
+
 export const siteConfig = {
   name: "Sangi Hospital",
   legalName: "Sangi Hospital",
@@ -7,8 +12,10 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sangihospital.com",
   locale: "en_IN",
   region: "Uttar Pradesh, India",
-  phone: "+91 931 121 2090",
-  phoneTel: "+919311212090",
+  phones: hospitalPhones,
+  phone: hospitalPhones[0].display,
+  phoneTel: hospitalPhones[0].tel,
+  phonesDisplay: hospitalPhones.map((phone) => phone.display).join(" / "),
   email: "info@sangihospital.com",
   social: {
     facebook: "https://www.facebook.com/sangihospital",

@@ -152,7 +152,7 @@ export default function CareerApplicationForm({ job }: CareerApplicationFormProp
               <input
                 id="phone"
                 type="tel"
-                placeholder={siteConfig.phone}
+                placeholder={siteConfig.phonesDisplay}
                 className="career-form__input"
                 aria-invalid={errors.phone ? "true" : "false"}
                 maxLength={20}

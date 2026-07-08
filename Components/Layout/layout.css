@@ -1606,11 +1606,22 @@
   background: rgba(19, 37, 115, 0.02);
 }
 
+.mobile-menu__phones {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.mobile-menu__phones > svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
 .mobile-menu__phone {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.55rem;
   font-family: var(--font-heading);
   font-size: 0.98rem;
   font-weight: 700;

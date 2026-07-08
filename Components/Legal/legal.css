@@ -324,6 +324,16 @@
   gap: 0.75rem;
 }
 
+.legal-cta__phone-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.legal-cta__phone-group .legal-cta__button {
+  justify-content: center;
+}
+
 .legal-cta__button {
   display: inline-flex;
   align-items: center;

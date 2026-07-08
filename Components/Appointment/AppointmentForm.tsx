@@ -201,7 +201,7 @@ export default function AppointmentForm() {
               <input
                 id="phone"
                 type="tel"
-                placeholder={siteConfig.phone}
+                placeholder={siteConfig.phonesDisplay}
                 className="appointment-form__input"
                 aria-invalid={errors.phone ? "true" : "false"}
                 maxLength={20}

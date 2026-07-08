@@ -1,4 +1,5 @@
 import type { LegalPageContent } from "../types";
+import { siteConfig } from "@/lib/site";
 
 export const patientInformationContent: LegalPageContent = {
   slug: "patient-information",
@@ -66,7 +67,7 @@ export const patientInformationContent: LegalPageContent = {
       id: "emergency-care",
       title: "Emergency Care",
       paragraphs: [
-        "Sangi Hospital provides 24×7 emergency services at designated locations. For life-threatening emergencies, call our helpline immediately or proceed directly to the emergency department.",
+        `Sangi Hospital provides 24×7 emergency services at designated locations. For life-threatening emergencies, call our helpline at ${siteConfig.phonesDisplay} immediately or proceed directly to the emergency department.`,
         "Do not use website contact forms for urgent medical situations. Emergency teams prioritise patients based on clinical severity.",
       ],
     },
@@ -121,7 +122,7 @@ export const patientInformationContent: LegalPageContent = {
       id: "need-help",
       title: "Need Help?",
       paragraphs: [
-        "For appointment support, billing queries, or general patient information, visit our Contact page or call our hospital helpline. Our team is here to assist you throughout your care journey.",
+        `For appointment support, billing queries, or general patient information, visit our Contact page or call our hospital helpline at ${siteConfig.phonesDisplay}. Our team is here to assist you throughout your care journey.`,
       ],
     },
   ],

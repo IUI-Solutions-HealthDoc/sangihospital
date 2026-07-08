@@ -1,5 +1,5 @@
+import { HospitalPhones } from "@/Components/ui/HospitalPhones";
 import { Clock, Mail, MapPin, Phone, ShieldCheck, Siren } from "lucide-react";
-import { siteConfig } from "@/lib/site";
 import { appointmentPage } from "./appointmentContent";
 
 export default function AppointmentSidebar() {
@@ -15,11 +15,9 @@ export default function AppointmentSidebar() {
         </p>
 
         <ul className="appointment-sidebar__contact-list">
-          <li>
-            <a href={`tel:${siteConfig.phoneTel}`} className="appointment-sidebar__contact-item">
-              <Phone size={18} aria-hidden="true" />
-              <span>{contact.phone}</span>
-            </a>
+          <li className="appointment-sidebar__contact-item appointment-sidebar__contact-item--phones">
+            <Phone size={18} aria-hidden="true" />
+            <HospitalPhones layout="stack" linkClassName="appointment-sidebar__phone-link" />
           </li>
           <li>
             <a href={`mailto:${contact.email}`} className="appointment-sidebar__contact-item">
@@ -47,8 +45,9 @@ export default function AppointmentSidebar() {
         <div className="appointment-sidebar__emergency">
           <Siren size={18} aria-hidden="true" />
           <p>
-            For life-threatening emergencies, call immediately or visit the nearest Sangi
-            Hospital emergency desk.
+            For life-threatening emergencies, call{" "}
+            <HospitalPhones layout="inline" linkClassName="appointment-sidebar__phone-link" />{" "}
+            immediately or visit the nearest Sangi Hospital emergency desk.
           </p>
         </div>
       </div>

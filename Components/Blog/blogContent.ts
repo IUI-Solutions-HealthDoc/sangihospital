@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site";
+
 export type BlogAuthor = {
   name: string;
   role: string;
@@ -231,7 +233,7 @@ export const blogPosts: BlogPost[] = [
     tags: ["Emergency", "Trauma Care", "24x7 Services"],
     content: [
       "Medical emergencies demand speed, skill, and calm coordination. Sangi Hospital's emergency department operates 24 hours a day with trained trauma teams and advanced life-support equipment.",
-      "If you witness a cardiac arrest, severe bleeding, stroke symptoms, or difficulty breathing, call our emergency helpline immediately while arranging transport to the nearest facility.",
+      `If you witness a cardiac arrest, severe bleeding, stroke symptoms, or difficulty breathing, call our emergency helpline at ${siteConfig.phonesDisplay} immediately while arranging transport to the nearest facility.`,
       "Our triage system prioritises patients based on severity, ensuring critical cases receive immediate attention. Ambulance services are integrated with the ER for seamless handoffs.",
       "The emergency team works closely with ICU, surgery, and diagnostics departments so patients move from stabilisation to definitive treatment without unnecessary delays.",
       "Preparation saves lives. Keep emergency contacts accessible, know your blood group, and carry a list of current medications. These small steps help our team act faster when it matters most.",

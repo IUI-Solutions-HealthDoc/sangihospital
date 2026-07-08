@@ -1,4 +1,5 @@
 import type { LegalPageContent } from "../types";
+import { siteConfig } from "@/lib/site";
 
 export const privacyPolicyContent: LegalPageContent = {
   slug: "privacy-policy",
@@ -65,7 +66,7 @@ export const privacyPolicyContent: LegalPageContent = {
       title: "Health & Medical Information",
       paragraphs: [
         "Sensitive health information shared during hospital visits is handled under our clinical confidentiality standards and applicable healthcare regulations in India. Online forms are intended for appointment requests and general inquiries — not for emergency medical communication.",
-        "For urgent or life-threatening conditions, please call our 24×7 helpline or visit the nearest Sangi Hospital emergency desk immediately.",
+        `For urgent or life-threatening conditions, please call our 24×7 helpline at ${siteConfig.phonesDisplay} or visit the nearest Sangi Hospital emergency desk immediately.`,
       ],
     },
     {
@@ -117,7 +118,7 @@ export const privacyPolicyContent: LegalPageContent = {
       id: "contact",
       title: "Contact Us",
       paragraphs: [
-        "For privacy-related questions or requests regarding your personal information, please contact our patient support team through the Contact page or call our hospital helpline during working hours.",
+        `For privacy-related questions or requests regarding your personal information, please contact our patient support team through the Contact page or call our hospital helpline at ${siteConfig.phonesDisplay} during working hours.`,
       ],
     },
   ],

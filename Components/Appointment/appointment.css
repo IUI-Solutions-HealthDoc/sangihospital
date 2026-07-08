@@ -496,6 +496,24 @@
   line-height: 1.5;
 }
 
+.appointment-sidebar__contact-item--phones {
+  align-items: flex-start;
+}
+
+.appointment-sidebar__phone-link {
+  color: var(--foreground-accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.appointment-sidebar__phone-link:hover {
+  text-decoration: underline;
+}
+
+.appointment-sidebar__emergency .appointment-sidebar__phone-link {
+  color: #c62828;
+}
+
 .appointment-sidebar__emergency {
   display: flex;
   gap: 0.65rem;
