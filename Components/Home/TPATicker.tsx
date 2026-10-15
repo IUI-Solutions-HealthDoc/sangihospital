@@ -25,8 +25,8 @@ function TpaLogoItem({ partner }: { partner: TpaPartner }) {
       <AppImage
         src={partner.logo}
         alt={partner.alt}
-        width={200}
-        height={64}
+        width={300}
+        height={96}
         unoptimized={partner.logo.endsWith(".svg")}
         className="tpa-ticker__logo"
       />

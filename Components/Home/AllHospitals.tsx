@@ -255,7 +255,7 @@ export default function AllHospitals() {
           </div>
         </div>
 
-        <TPATicker />
+        {/* <TPATicker /> */}
       </div>
     </section>
   );

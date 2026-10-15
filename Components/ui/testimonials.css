@@ -95,24 +95,8 @@
   margin-top: 2rem;
 }
 
-.testimonials__avatar-wrap {
-  position: relative;
-  flex-shrink: 0;
-  width: 3.25rem;
-  height: 3.25rem;
-  overflow: hidden;
-  border: 2px solid rgba(19, 37, 115, 0.1);
-  border-radius: 9999px;
-  background: rgba(19, 37, 115, 0.06);
-  box-shadow: 0 8px 20px rgba(0, 3, 40, 0.08);
-}
-
-.testimonials__avatar {
-  object-fit: cover;
-}
-
 .testimonials__author-copy {
-  text-align: left;
+  text-align: center;
 }
 
 .testimonials__author-name {

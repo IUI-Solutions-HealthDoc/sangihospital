@@ -16,6 +16,7 @@ import Sangidef from "@/Components/ui/Sangidef";
 import Testimonials from "@/Components/ui/Testimonials";
 import Casestories from "@/Components/ui/Casestories";
 import NabhCerti from "@/Components/ui/NabhCerti";
+import TPATicker from "@/Components/Home/TPATicker";
 
 export const metadata: Metadata = {
   title: `${siteConfig.legalName} | ${siteConfig.tagline} in Uttar Pradesh`,
@@ -66,12 +67,13 @@ export default function Home() {
       />
       <main id="main-content">
         <Hero />
+        <AllHospitals />
         <OurDepartment />
         <Services />
         {/* <Doctorprof /> */}
         <Casestories />
         <AppointmentCta />
-        <AllHospitals />
+        <TPATicker />
         <Sangidef />
         <NabhCerti />
         <Testimonials />

@@ -6,7 +6,7 @@ import {
   ScanLine,
   Siren,
 } from "lucide-react";
-import servicesHeroImage from "../../public/assets/images/home/servicehome.png";
+import servicesHeroImage from "../../public/assets/sangiimages1/sangiimages1/homepage/docduo.png";
 
 const services = [
   {

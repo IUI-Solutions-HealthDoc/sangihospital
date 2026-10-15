@@ -1,6 +1,5 @@
 "use client";
 
-import AppImage from "@/Components/ui/AppImage";
 import { Quote } from "lucide-react";
 import { useRef } from "react";
 import type { Swiper as SwiperType } from "swiper";
@@ -16,7 +15,6 @@ type Testimonial = {
   quote: string;
   name: string;
   role: string;
-  avatar: string;
 };
 
 const testimonials: Testimonial[] = [
@@ -26,7 +24,6 @@ const testimonials: Testimonial[] = [
       "The care we received at Sangi Hospital was exceptional. From admission to discharge, the doctors and nursing staff were attentive, compassionate, and highly professional throughout our stay.",
     name: "Jayesh Chelani",
     role: "Patient — Cardiology",
-    avatar: "/assets/images/avatars/patient-1.jpg",
   },
   {
     id: "2",
@@ -34,7 +31,6 @@ const testimonials: Testimonial[] = [
       "We chose Sangi Hospital for my mother's surgery and could not have asked for a better experience. The facilities are modern, the team is reassuring, and the follow-up care was thorough.",
     name: "Chhavi Verma",
     role: "Patient Family — General Surgery",
-    avatar: "/assets/images/avatars/patient-2.jpg",
   },
   {
     id: "3",
@@ -42,7 +38,6 @@ const testimonials: Testimonial[] = [
       "From emergency care to specialist consultations, Sangi Hospital has consistently delivered trustworthy medical support for our family. We feel safe knowing expert doctors are always nearby.",
     name: "Ankita Sharma",
     role: "Patient — Gynecology",
-    avatar: "/assets/images/avatars/patient-3.jpg",
   },
   {
     id: "4",
@@ -50,7 +45,6 @@ const testimonials: Testimonial[] = [
       "The diagnostic services were quick and accurate, and the staff explained every step clearly. It is rare to find a hospital that combines advanced technology with such genuine human care.",
     name: "Vidhi Singh",
     role: "Patient — Radiology",
-    avatar: "/assets/images/avatars/patient-4.jpg",
   },
 ];
 
@@ -60,19 +54,6 @@ function TestimonialSlide({ item }: { item: Testimonial }) {
       <blockquote className="testimonials__text">{item.quote}</blockquote>
 
       <div className="testimonials__author">
-        <span
-          className="testimonials__avatar-wrap"
-          style={{ position: "relative" }}
-        >
-          <AppImage
-            src={item.avatar}
-            alt={item.name}
-            fill
-            sizes="52px"
-            className="testimonials__avatar"
-          />
-        </span>
-
         <div className="testimonials__author-copy">
           <p className="testimonials__author-name">{item.name}</p>
           <p className="testimonials__author-role">{item.role}</p>
