@@ -37,8 +37,14 @@ export default function Services() {
     <section className="services-section">
       <div className="services-section__inner">
         <div className="services-section__grid">
+          <div className="services-header">
+            <p className="services-eyebrow">Complete Care</p>
+            <h2 className="services-heading">
+              Trusted Hospital Services Under One Roof
+            </h2>
+          </div>
+
           <div className="services-section__cards-col">
-           
             <div className="services-section__list">
               {services.map((service) => {
                 const Icon = service.icon;
@@ -68,23 +74,15 @@ export default function Services() {
           </div>
 
           <div className="services-section__visual-col">
-            <div className="services-content">
-              <p className="services-eyebrow">Complete Care</p>
-
-              <h2 className="services-heading">
-                Trusted Hospital Services Under One Roof
-              </h2>
-
-              <div className="services-image-wrap">
-                <AppImage
-                  src={servicesHeroImage}
-                  alt="Medical professionals at Sangi Hospital"
-                  fill
-                  sizes="(max-width: 768px) 85vw, (max-width: 992px) 55vw, 26rem"
-                  className="services-image"
-                  priority
-                />
-              </div>
+            <div className="services-image-wrap">
+              <AppImage
+                src={servicesHeroImage}
+                alt="Medical professionals at Sangi Hospital"
+                fill
+                sizes="(max-width: 768px) 85vw, (max-width: 992px) 45vw, 440px"
+                className="services-image"
+                priority
+              />
             </div>
           </div>
         </div>
