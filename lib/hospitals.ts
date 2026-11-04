@@ -38,7 +38,7 @@ export const hospitalsMegaMenu = {
               name: "Sangi Hospital, Raya",
               city: "Raya",
               address: "Mathura Road, Raya, Uttar Pradesh",
-              image: "/assets/images/about/about-hospital.jpg",
+              image: "/assets/images/hospitals/raya.jpg",
               href: "/hospitals/raya",
             },
             {
